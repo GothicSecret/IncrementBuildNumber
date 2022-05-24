@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'eu.gcr.io/${PROJECT_ID}/increment-build-number:${_VERSION}', '-t', 'eu.gcr.io/${PROJECT_ID}/increment-build-number:latest', '.']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'eu.gcr.io/${PROJECT_ID}/increment-build-number:${_VERSION}']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'eu.gcr.io/${PROJECT_ID}/increment-build-number:latest']
+
+substitutions:
+  _VERSION: '0-0-1'
