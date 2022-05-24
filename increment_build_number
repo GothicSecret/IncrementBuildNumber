@@ -22,7 +22,7 @@ while [ "$1" != "" ]; do
     shift
 done
 
-SOURCE_FILE=$SOURCE_FILE-$MAJOR"."$MINOR
+SOURCE_FILE=$SOURCE_FILE
 BUILD_NUM_FILE=$SOURCE_FILE
 
 if [[ -z "$SOURCE_FILE" ]];then
