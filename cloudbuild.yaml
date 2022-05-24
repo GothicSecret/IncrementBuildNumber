@@ -9,4 +9,4 @@ steps:
   args: ['push', 'eu.gcr.io/${PROJECT_ID}/increment-build-number:latest']
 
 substitutions:
-  _VERSION: '0-0-1'
+  _VERSION: '0-0-2'
